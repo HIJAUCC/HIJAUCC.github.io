@@ -1,37 +1,36 @@
-body {
-  font-family: Arial, sans-serif;
+body, html {
   margin: 0;
   padding: 0;
-  background: #f0f4f8;
-  color: #333;
-  line-height: 1.6;
+  overflow: hidden;
+  background: #002b5c; /* dark blue */
+  font-family: 'Segoe UI', sans-serif;
 }
 
-header, footer {
-  background: #1f2937;
-  color: white;
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.content {
+  position: absolute;
+  top: 30%;
+  width: 100%;
   text-align: center;
-  padding: 2rem 0;
-}
-
-main {
-  padding: 2rem;
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-button {
-  background: #3b82f6;
   color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 8px;
+  z-index: 1;
 }
 
-button:hover {
-  background: #2563eb;
+h1 {
+  font-size: 4em;
+  font-weight: bold;
+  color: #1e90ff; /* boldish blue */
+  margin-bottom: 0.2em;
+}
+
+#changingText {
+  font-size: 2em;
+  font-weight: bold;
+  color: #00ff88; /* bright green */
 }
