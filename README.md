@@ -1,1 +1,2 @@
-# HIJAUCC.github.io
+# DinoCDX
+I'm a cool guy
