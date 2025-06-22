@@ -1,4 +1,4 @@
-/* Reset & base styles */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -20,71 +20,57 @@ body {
   background: radial-gradient(circle at center, #111 0%, #000 100%);
 }
 
-/* Neon Text Styles */
+/* Neon Text */
 .neon-text {
   font-size: 5rem;
   text-align: center;
 }
-
-/* Glowing stroke + pulse animation for DinoCDX */
 .cyan-glow {
   color: transparent;
   -webkit-text-stroke: 2px #00ffff;
   animation: neonPulse 2s infinite ease-in-out;
 }
 
-/* Neon Button Area */
+/* Menu Section */
 .menu {
   display: flex;
   justify-content: center;
   padding: 100px 20px;
 }
-
 .button-container {
   display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
+  gap: 40px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* Pulse effect */
+/* Glow Pulse Animation */
 @keyframes neonPulse {
   0%, 100% {
-    text-shadow:
-      0 0 5px currentColor,
-      0 0 10px currentColor,
-      0 0 20px currentColor,
-      0 0 30px currentColor;
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 20px currentColor;
   }
   50% {
-    text-shadow:
-      0 0 2px currentColor,
-      0 0 4px currentColor,
-      0 0 8px currentColor,
-      0 0 10px currentColor;
+    text-shadow: 0 0 2px currentColor, 0 0 5px currentColor, 0 0 10px currentColor;
   }
 }
 
-/* Base Neon Button Style - Outline text */
+/* Buttons - Text Outline */
 .neon-button {
-  padding: 20px 40px;
+  width: 180px;
+  padding: 20px;
   font-size: 1.5rem;
   text-decoration: none;
-  background-color: transparent;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: transparent;
-  -webkit-text-stroke: 1px currentColor;
-  animation: neonPulse 2s infinite ease-in-out;
-  cursor: pointer;
-  min-width: 180px;
   text-align: center;
+  color: transparent;
+  background: transparent;
+  border: none;
+  -webkit-text-stroke: 1px currentColor;
+  font-weight: bold;
+  animation: neonPulse 2s infinite ease-in-out;
+  text-transform: uppercase;
 }
 
-/* Neon Colors */
+/* Individual Colors */
 .purple-glow {
   color: #a200ff;
 }
@@ -93,4 +79,19 @@ body {
 }
 .yellow-glow {
   color: #ffff00;
+}
+
+/* Pacman */
+#pacman {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  background: yellow;
+  border-radius: 50%;
+  clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+  z-index: 1000;
+  transition: top 0.2s linear, left 0.2s linear;
+  box-shadow: 0 0 20px #ffff00, 0 0 40px #ffff00;
 }
